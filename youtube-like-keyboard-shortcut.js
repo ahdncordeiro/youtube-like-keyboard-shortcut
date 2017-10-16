@@ -11,4 +11,8 @@ function doc_keyUp(e) {
 }
 
 // register the handler 
-document.addEventListener('keyup', doc_keyUp, false);
+let eventListenerAdded = (eventListenerAdded == null ? false : eventListenerAdded);
+if (!eventListenerAdded) {
+    console.log("Adding YouTube like keyboard shortcut event listener...")
+    document.addEventListener('keyup', doc_keyUp, false);
+}
