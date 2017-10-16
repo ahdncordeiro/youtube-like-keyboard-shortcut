@@ -10,10 +10,14 @@ escape:"esc",plus:"+",mod:/Mac|iPod|iPhone|iPad/.test(navigator.platform)?"meta"
 this._directMap={};return this};c.prototype.stopCallback=function(a,b){return-1<(" "+b.className+" ").indexOf(" mousetrap ")||E(b,this.target)?!1:"INPUT"==b.tagName||"SELECT"==b.tagName||"TEXTAREA"==b.tagName||b.isContentEditable};c.prototype.handleKey=function(){return this._handleKey.apply(this,arguments)};c.addKeycodes=function(a){for(var b in a)a.hasOwnProperty(b)&&(p[b]=a[b]);n=null};c.init=function(){var a=c(v),b;for(b in a)"_"!==b.charAt(0)&&(c[b]=function(b){return function(){return a[b].apply(a,
 arguments)}}(b))};c.init();r.Mousetrap=c;"undefined"!==typeof module&&module.exports&&(module.exports=c);"function"===typeof define&&define.amd&&define(function(){return c})}})("undefined"!==typeof window?window:null,"undefined"!==typeof window?document:null);
 
-Mousetrap.bind('u', function() {
+Mousetrap.bind(['u', 'mod+u'], function(e, combo) {
+  console.log(combo);
+  console.log("Keyboard for like triggered.");
   document.querySelector("#top-level-buttons > ytd-toggle-button-renderer:nth-child(1) > a").click();
-}, 'keyup');
+});
 
-Mousetrap.bind('i', function() {
+Mousetrap.bind(['i', 'mod+i'], function(e, combo) {
+  console.log(combo);
+  console.log("Keyboard for dislike triggered.");
   document.querySelector("#top-level-buttons > ytd-toggle-button-renderer:nth-child(2) > a").click();
-}, 'keyup');
+});
