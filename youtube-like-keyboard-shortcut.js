@@ -14,14 +14,14 @@ Mousetrap.reset();
 
 Mousetrap.bind('u', function(e, combo) {
 // Mousetrap.bind(['u', 'mod+u'], function(e, combo) {
-//   console.log(combo);
-//   console.log("Keyboard for like triggered.");
+  console.log(combo);
+  console.log("Keyboard for like triggered.");
   document.querySelector("#top-level-buttons > ytd-toggle-button-renderer:nth-child(1) > a").click();
 });
 
 Mousetrap.bind('i', function(e, combo) {
 // Mousetrap.bind(['i', 'mod+i'], function(e, combo) {
-//   console.log(combo);
-//   console.log("Keyboard for dislike triggered.");
+  console.log(combo);
+  console.log("Keyboard for dislike triggered.");
   document.querySelector("#top-level-buttons > ytd-toggle-button-renderer:nth-child(2) > a").click();
 });
