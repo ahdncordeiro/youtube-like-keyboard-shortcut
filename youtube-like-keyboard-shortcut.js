@@ -1,3 +1,4 @@
+var eventListenerAdded;
 // define a handler
 function doc_keyUp(e) {
     // this would test if keyCode 85 (u) or keyCode 73 (i) was pressed
@@ -11,8 +12,8 @@ function doc_keyUp(e) {
 }
 
 // register the handler 
-let eventListenerAdded = (eventListenerAdded == null ? false : eventListenerAdded);
-if (!eventListenerAdded) {
+if ((eventListenerAdded == null ? false : eventListenerAdded)) {
+    eventListenerAdded = true;
     console.log("Adding YouTube like keyboard shortcut event listener...")
     document.addEventListener('keyup', doc_keyUp, false);
 }
